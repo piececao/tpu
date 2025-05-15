@@ -1,17 +1,5 @@
 `timescale 1ns/1ps
 
-module d_trigger#(
-    parameter DATAWIDTH = 32
-)(
-    input wire clk,
-    input wire [DATAWIDTH-1:0]D,
-    output reg [DATAWIDTH-1:0]Q
-);
-always @(posedge clk) begin
-    Q <= D;
-end
-endmodule
-
 module processing_element(
     input wire [31:0]x_in,
     input wire [31:0]y_in,
